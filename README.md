@@ -25,6 +25,9 @@ Then, install the remaining requirements using `pip`:
 ```bash
 conda activate advsampling
 pip install ipykernel
+pip install -U scikit-learn
+pip install ase
+pip install nglview
 ```
 
 To ensure that the `advsampling` environment is accessible through Jupyter, add the the `advsampling` display name:
