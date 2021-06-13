@@ -2,16 +2,17 @@
 
 Code for performing adversarial attacks on atomistic systems using NN potentials. The software was based on the paper ["Differentiable sampling of molecular geometries with uncertainty-based adversarial attacks"](https://arxiv.org/abs/2101.11588), and implemented by Daniel Schwalbe-Koda and Aik Rui Tan.
 
-The folder [`examples`](examples/) contains two Jupyter notebooks that illustrate the examples shown in the manuscript:
+The folder [`examples`](examples/) contains three Jupyter notebooks that illustrate the examples shown in the manuscript:
 
  - [1D double well potential](examples/1D_DoubleWell.ipynb)
  - [2D double well potential](examples/2D_DoubleWell.ipynb)
+ - [Adversarial attack on ANI force field](examples/TorchANI.ipynb)
 
 More examples regarding the use of atomistic systems will be added soon.
 
 ## Installation from source
 
-This software was tested with [PyTorch 1.4](http://pytorch.org)
+This software was tested with [PyTorch 1.4](http://pytorch.org). The installation time highly depends on your internet connection and availability of a `conda` installation, but should not take more than an hour.
 
 We recommend creating a `conda` environment to run the code. To do that, use the following commands:
 
