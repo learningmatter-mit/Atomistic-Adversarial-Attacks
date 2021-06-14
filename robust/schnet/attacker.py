@@ -70,7 +70,8 @@ class Attacker:
             for r in results
         ], dim=-1)
 
-        loss = self.loss_fn.loss_fn(x=None, e=energy, f=forces).sum()
+        energy_per_atom = energy / self.num_atoms
+        loss = self.loss_fn.loss_fn(x=None, e=energy_per_atom, f=forces).sum()
 
         loss_item = loss.item()
 
