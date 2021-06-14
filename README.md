@@ -2,40 +2,45 @@
 
 Code for performing adversarial attacks on atomistic systems using NN potentials. The software was based on the paper ["Differentiable sampling of molecular geometries with uncertainty-based adversarial attacks"](https://arxiv.org/abs/2101.11588), and implemented by Daniel Schwalbe-Koda and Aik Rui Tan.
 
-The folder [`examples`](examples/) contains three Jupyter notebooks that illustrate the examples shown in the manuscript:
+The folder [`examples`](examples/) contains several Jupyter notebooks that illustrate the examples shown in the manuscript:
 
  - [1D double well potential](examples/1D_DoubleWell.ipynb)
  - [2D double well potential](examples/2D_DoubleWell.ipynb)
+ - [Performing adversarial attacks on ammonia](examples/Ammonia_attack.ipynb)
+ - [Performing adversarial attacks on zeolites](examples/Zeolite_attack.ipynb)
+ - [Performing NNMD simulations on ammonia](examples/Ammonia_MD.ipynb)
+ - [Performing NNMD simulations on zeolites](examples/Zeolite_MD.ipynb)
  - [Adversarial attack on ANI force field](examples/TorchANI.ipynb)
 
-More examples regarding the use of atomistic systems will be added soon.
+The folder [`data`](data/) contains two datasets used in the paper: the DFT energies/forces of [ammonia](data/ammonia.pth.tar) and [zeolites occluded with neutral molecules](data/zeolite.pth.tar), in the format readable by the [Neural Force Field repo](https://github.com/learningmatter-mit/NeuralForceField).
 
 ## Installation from source
 
 This software was tested with [PyTorch 1.4](http://pytorch.org). The installation time highly depends on your internet connection and availability of a `conda` installation, but should not take more than an hour.
 
-We recommend creating a `conda` environment to run the code. To do that, use the following commands:
+We recommend creating a `conda` environment to run the code. To do that, follow the setup instructions at the [Neural Force Field repository](https://github.com/learningmatter-mit/NeuralForceField).
 
 ```bash
 conda upgrade conda
-conda create -n advsampling python=3.7 scipy numpy pytorch=1.4 jupyter -c pytorch
+conda create -n nff python=3.7 scikit-learn pytorch=1.4.0 cudatoolkit=10.0 ase pandas pymatgen sympy rdkit hyperopt jq openbabel -c pytorch -c conda-forge -c rdkit -c openbabel
 ```
 
 Then, install the remaining requirements using `pip`:
 
 ```bash
-conda activate advsampling
-pip install ipykernel
-pip install -U scikit-learn
-pip install ase
-pip install nglview
+conda activate nff
+pip install ipykernel nglview sigopt e3fp
 ```
 
-To ensure that the `advsampling` environment is accessible through Jupyter, add the the `advsampling` display name:
+To ensure that the `nff` environment is accessible through Jupyter, add the the `nff` display name:
 
 ```bash
-python -m ipykernel install --user --name advsampling --display-name "advsampling"
+python -m ipykernel install --user --name nff --display-name "nff"
 ```
+
+## Tutorials on how to use the NN potential
+
+More tutorials are available on the [Neural Force Field repository](https://github.com/learningmatter-mit/NeuralForceField)
 
 ## Citing
 
