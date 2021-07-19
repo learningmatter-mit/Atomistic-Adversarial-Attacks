@@ -14,6 +14,8 @@ The folder [`examples`](examples/) contains several Jupyter notebooks that illus
 
 The folder [`data`](data/) contains two datasets used in the paper: the DFT energies/forces of [ammonia](data/ammonia.pth.tar) and [zeolites occluded with neutral molecules](data/zeolite.pth.tar), in the format readable by the [Neural Force Field repo](https://github.com/learningmatter-mit/NeuralForceField).
 
+The full atomistic data is available at the Materials Cloud Archive on the link <https://doi.org/10.24435/materialscloud:2w-6h>.
+
 ## Installation from source
 
 This software was tested with [PyTorch 1.4](http://pytorch.org). The installation time highly depends on your internet connection and availability of a `conda` installation, but should not take more than an hour.
