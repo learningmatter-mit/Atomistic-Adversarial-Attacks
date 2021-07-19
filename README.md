@@ -1,5 +1,7 @@
 # Atomistic Adversarial Attacks
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5114385.svg)](https://doi.org/10.5281/zenodo.5114385)
+
 Code for performing adversarial attacks on atomistic systems using NN potentials. The software was based on the paper ["Differentiable sampling of molecular geometries with uncertainty-based adversarial attacks"](https://arxiv.org/abs/2101.11588), and implemented by Daniel Schwalbe-Koda and Aik Rui Tan.
 
 The folder [`examples`](examples/) contains several Jupyter notebooks that illustrate the examples shown in the manuscript:
