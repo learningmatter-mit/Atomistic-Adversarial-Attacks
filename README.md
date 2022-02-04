@@ -54,8 +54,11 @@ The reference for the paper is the following:
 @article{schwalbe2021differentiable,
   title={Differentiable sampling of molecular geometries with uncertainty-based adversarial attacks},
   author={Schwalbe-Koda, Daniel and Tan, Aik Rui and G{\'o}mez-Bombarelli, Rafael},
-  journal={arXiv:2101.11588},
-  year={2021}
+  journal={Nature Communications},
+  volume={12},
+  pages={5104},
+  year={2021},
+  publisher={Nature Publishing Group}
 }
 ```
 
