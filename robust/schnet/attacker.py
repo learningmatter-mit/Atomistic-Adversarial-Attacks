@@ -15,10 +15,12 @@ class Attacker:
         epsilon=3,
         optim_lr=1e-2,
         device=0,
+        nbr_list_update=2,
     ):
         self.initial = initial
         self.ensemble = ensemble
         self.loss_fn = adv_loss
+        self.nbr_list_update = nbr_list_update
         
         self.delta_init = delta_init
         self.epsilon = epsilon
@@ -53,7 +55,7 @@ class Attacker:
     def attack_epoch(self, opt, delta, epoch):
         opt.zero_grad()
 
-        batch = self.prepare_attack(delta, update_nbr_list=(epoch % 10 == 0))
+        batch = self.prepare_attack(delta, update_nbr_list=(epoch % self.nbr_list_update == 0))
 
         results = [
             m(batch)
