@@ -50,13 +50,19 @@ class AdvLoss(LossFunction):
     def probability_fn(self, yp):
         return self.boltzmann_probability(yp) / self.partition_fn
 
-    def loss_fn(self, x, e, f):
-        return -f.var(-1).mean(-1, keepdims=True) * self.probability_fn(e.mean(-1).reshape(-1, 1))
+    def loss_fn(self, x, e, f=None, s=None):
+        if s is not None:
+            return -s.var(-1).mean() * self.probability_fn(e.mean(-1).reshape(-1, 1))
+        if f is not None:
+            return -f.var(-1).mean(-1, keepdims=True) * self.probability_fn(e.mean(-1).reshape(-1, 1))
 
-    def __call__(self, batch, results):
-        x, e, f = results
-
-        return self.loss_fn(x, e, f).sum()
+    def __call__(self, batch, results, lattice=False):
+        if lattice:
+            x, e, f, s = results
+            return self.loss_fn(x, e, s).sum()
+        else:
+            x, e, f = results
+            return self.loss_fn(x, e, f).sum()
 
 
 class AdvLossEnergyUncertainty(AdvLoss):
