@@ -1,0 +1,47 @@
+CRYST1   15.000   15.000   15.000  90.00  90.00  90.00 P 1           1
+ATOM      1  C00 UNK     1       5.300   8.260   8.553  1.00  0.00           C
+ATOM      2  C01 UNK     1       6.362   7.434   7.787  1.00  0.00           C
+ATOM      3  C02 UNK     1       6.964   6.429   8.771  1.00  0.00           C
+ATOM      4  O03 UNK     1       6.307   5.659   9.488  1.00  0.00           O
+ATOM      5  N04 UNK     1       8.290   6.477   8.824  1.00  0.00           N
+ATOM      6  C05 UNK     1       9.241   5.660   9.527  1.00  0.00           C
+ATOM      7  N06 UNK     1       7.435   8.346   7.297  1.00  0.00           N
+ATOM      8  C07 UNK     1       7.833   8.456   6.048  1.00  0.00           C
+ATOM      9  O08 UNK     1       7.397   7.736   5.168  1.00  0.00           O
+ATOM     10  C09 UNK     1       8.671   9.659   5.640  1.00  0.00           C
+ATOM     11  H0A UNK     1       5.758   8.712   9.433  1.00  0.00           H
+ATOM     12  H0B UNK     1       4.847   8.992   7.884  1.00  0.00           H
+ATOM     13  H0C UNK     1       4.528   7.594   8.939  1.00  0.00           H
+ATOM     14  H0D UNK     1       5.897   6.874   6.976  1.00  0.00           H
+ATOM     15  H0E UNK     1       8.531   7.158   8.118  1.00  0.00           H
+ATOM     16  H0F UNK     1       8.751   5.028  10.266  1.00  0.00           H
+ATOM     17  H0G UNK     1       9.910   6.345  10.048  1.00  0.00           H
+ATOM     18  H0H UNK     1       9.759   4.988   8.842  1.00  0.00           H
+ATOM     19  H0I UNK     1       7.745   9.019   7.983  1.00  0.00           H
+ATOM     20  H0J UNK     1       9.714   9.468   5.894  1.00  0.00           H
+ATOM     21  H0K UNK     1       8.361  10.609   6.077  1.00  0.00           H
+ATOM     22  H0M UNK     1       8.619   9.797   4.560  1.00  0.00           H
+TER 
+CONECT    1    2   
+CONECT    2    3   
+CONECT    3    4   
+CONECT    3    5   
+CONECT    5    6   
+CONECT    2    7   
+CONECT    7    8   
+CONECT    8    9   
+CONECT    8   10  
+CONECT    1   11  
+CONECT    1   12  
+CONECT    1   13  
+CONECT    2   14  
+CONECT    5   15  
+CONECT    6   16  
+CONECT    6   17  
+CONECT    6   18  
+CONECT    7   19  
+CONECT   10   20  
+CONECT   10   21  
+CONECT   10   22  
+END
+    
