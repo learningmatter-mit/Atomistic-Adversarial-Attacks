@@ -9,7 +9,7 @@ The folder [`examples`](examples/) contains several Jupyter notebooks that illus
  - [1D double well potential](examples/1D_DoubleWell.ipynb)
  - [2D double well potential](examples/2D_DoubleWell.ipynb)
  - [Performing adversarial attacks on ammonia](examples/Ammonia_attack.ipynb)
- - [Performing adversarial attacks on alanine dipeptide](examples/alanine_attaack.py)
+ - [Performing adversarial attacks on alanine dipeptide](examples/alanine_attack.py)
  - [Performing adversarial attacks on zeolites](examples/Zeolite_attack.ipynb)
  - [Performing NNMD simulations on ammonia](examples/Ammonia_MD.ipynb)
  - [Performing NNMD simulations on zeolites](examples/Zeolite_MD.ipynb)
