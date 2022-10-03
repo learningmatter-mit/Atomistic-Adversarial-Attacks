@@ -9,12 +9,13 @@ The folder [`examples`](examples/) contains several Jupyter notebooks that illus
  - [1D double well potential](examples/1D_DoubleWell.ipynb)
  - [2D double well potential](examples/2D_DoubleWell.ipynb)
  - [Performing adversarial attacks on ammonia](examples/Ammonia_attack.ipynb)
+ - [Performing adversarial attacks on alanine dipeptide](examples/alanine_attaack.py)
  - [Performing adversarial attacks on zeolites](examples/Zeolite_attack.ipynb)
  - [Performing NNMD simulations on ammonia](examples/Ammonia_MD.ipynb)
  - [Performing NNMD simulations on zeolites](examples/Zeolite_MD.ipynb)
  - [Adversarial attack on ANI force field](examples/TorchANI.ipynb)
 
-The folder [`data`](data/) contains two datasets used in the paper: the DFT energies/forces of [ammonia](data/ammonia.pth.tar) and [zeolites occluded with neutral molecules](data/zeolite.pth.tar), in the format readable by the [Neural Force Field repo](https://github.com/learningmatter-mit/NeuralForceField).
+The folder [`data`](data/) contains three datasets used in the paper: the DFT energies/forces of [ammonia](data/ammonia.pth.tar), OPLS energies/forces of [alanine dipeptide](data/alanine_dipeptide.pth.tar), and [zeolites occluded with neutral molecules](data/zeolite.pth.tar), in the format readable by the [Neural Force Field repo](https://github.com/learningmatter-mit/NeuralForceField).
 
 The full atomistic data is available at the Materials Cloud Archive on the link <https://doi.org/10.24435/materialscloud:2w-6h>.
 
