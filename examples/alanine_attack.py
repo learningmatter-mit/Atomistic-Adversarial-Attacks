@@ -15,10 +15,20 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Arguments to perform adversarial attack on dihedral angles of alanine dipeptide. Models have to be trained before performing attacks."
     )
-    parser.add_argument("model_dir", type=str, help="Path to trained models")
-    parser.add_argument("generation", type=int, help="Number of active learning loop")
     parser.add_argument(
-        "num_attacks", type=int, help="Number of data points to perform attack on"
+        "model_dir",
+        type=str,
+        help="Path to trained models",
+    )
+    parser.add_argument(
+        "generation",
+        type=int,
+        help="Number of active learning loop",
+    )
+    parser.add_argument(
+        "num_attacks",
+        type=int,
+        help="Number of data points to perform attack on",
     )
     parser.add_argument(
         "--n_epochs",
@@ -26,14 +36,23 @@ if __name__ == "__main__":
         default=1000,
         help="Number of epochs to perform attacks for",
     )
-    parser.add_argument("--lr", type=float, default=1e-2, help="Learning rate")
+    parser.add_argument(
+        "--lr",
+        type=float,
+        default=1e-2,
+        help="Learning rate",
+    )
     parser.add_argument(
         "--kT",
         type=float,
         default=20,
         help="Temperature at which the adversarial loss is set to",
     )
-    parser.add_argument("--device", type=str, default="cuda")
+    parser.add_argument(
+        "--device",
+        type=str,
+        default="cuda",
+    )
     args = parser.parse_args()
 
     print(f"Loading trained model from {args.model_dir}")
@@ -52,7 +71,10 @@ if __name__ == "__main__":
 
     starting_points = []
     for config in seed_configs:
-        mol = ase.Atoms(symbols=config["nxyz"][:, 0], positions=config["nxyz"][:, 1:])
+        mol = ase.Atoms(
+            symbols=config["nxyz"][:, 0],
+            positions=config["nxyz"][:, 1:],
+        )
         phi = mol.get_dihedral(a1=7, a2=6, a3=1, a4=2)
         psi = mol.get_dihedral(a1=4, a2=2, a3=1, a4=6)
         starting_points.append([phi, psi])
