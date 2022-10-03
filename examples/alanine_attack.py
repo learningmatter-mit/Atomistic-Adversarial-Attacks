@@ -82,7 +82,7 @@ if __name__ == "__main__":
     starting_points = torch.Tensor(starting_points).to(args.device)
     delta = torch.randn_like(starting_points, requires_grad=True, device=args.device)
 
-    print("Start adversarial attack")
+    print("Starting adversarial attack")
 
     opt = torch.optim.Adam([delta], lr=args.lr)
     loss_fun = AdvLoss(energies=seed_dset.props["energy"], temperature=args.kT)
@@ -91,9 +91,11 @@ if __name__ == "__main__":
         args.device
     )
 
+    # backprop against dihedral angle of alanine dipeptide for n_epochs
     for t in range(args.n_epochs):
         opt.zero_grad()
 
+        # mod by 360 since rotation by 360 deg is the same as 0 deg
         inputs = ((starting_points + delta) % 360).to(args.device)
 
         dset = []
@@ -132,8 +134,6 @@ if __name__ == "__main__":
             print(t, loss.item())
 
     adv_path = os.path.join("dataset", f"gen{args.generation}_attacks.pth.tar")
-    print("Save attacks to dataset {}".format(adv_path))
     advdset = Dataset(concatenate_dict(*dset))
     advdset.save(adv_path)
-
-    print("Done")
+    print("Saved attack points to dataset {}".format(adv_path))
